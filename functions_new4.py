@@ -13,7 +13,7 @@ sys.version
 #### Define interactive surface that stores hold location on click in list - ready for prediction
 
 def interactive_selection():
-    from ipywidgets import Button, HBox, VBox, widgets, Layout
+    from ipywidgets import Button, HBox, VBox, widgets, Layout, Gridspeclayout
     from IPython.display import display
     
     ## Generate interactive grid
@@ -43,7 +43,10 @@ def interactive_selection():
             button.on_click(on_button_clicked)
     
     whole_grid = VBox([d['H_box0'], d['H_box1'], d['H_box2'], d['H_box3'], d['H_box4'], d['H_box5'], d['H_box6'], d['H_box7'], d['H_box8'], d['H_box9'], d['H_box10'], d['H_box11'], d['H_box12'], d['H_box13'], d['H_box14'], d['H_box15'], d['H_box16'], d['H_box17']])
-    display(whole_grid)
+    grid = GridspecLayout(18,11)
+    grid[:,:] = whole_grid
+    display(grid)
+    #display(whole_grid)
         
     ## generate Termination buttons
 
