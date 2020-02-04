@@ -35,7 +35,7 @@ def interactive_selection():
     ##define grid
     for R in range(hold_key_matrix.shape[0]):    
         hold = hold_key_matrix[R,:].tolist() #convert to list, start with "18"
-        item = [Button(description=h, layout=Layout(width='45px', height='60%')) for h in hold] #list of buttons
+        item = [Button(description=h) for h in hold] #list of buttons
         d['{}{}'.format('H_box',R)] = HBox(item) #store all Hboxes in dictionary
         #define buttons
         for C in range(hold_key_matrix.shape[1]):
