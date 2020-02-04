@@ -13,7 +13,7 @@ sys.version
 #### Define interactive surface that stores hold location on click in list - ready for prediction
 
 def interactive_selection():
-    from ipywidgets import Button, HBox, VBox, widgets, Layout, Gridspeclayout
+    from ipywidgets import Button, HBox, VBox, widgets, Layout, GridspecLayout
     from IPython.display import display
     
     ## Generate interactive grid
